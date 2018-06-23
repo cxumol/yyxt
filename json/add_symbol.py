@@ -24,13 +24,14 @@ for _,_,files in os.walk(a):
             ctrlfh[ONE]=each
 #             print(ONE,':',ctrlfh[ONE])
         
-        with open(z+'/seg_sym_'+afile[5:], 'w+',encoding='utf8') as fz:
+        with open(z+'/seg_sym_'+afile[4:], 'w+',encoding='utf8') as fz:
             z_content=fz.read()
         
             z_new_content=z_content
             for k,v in ctrlfh.items():
                 z_new_content=re.sub(k,v, z_new_content)
         
+            z_new_content=re.sub("", z_new_content)
             fz.write(z_new_content)
 #         with open(z+'/'+'_BME'+i, 'w',encoding='utf8') as fb:
 #             fb.write(z_new_content)
