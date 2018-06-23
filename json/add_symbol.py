@@ -31,7 +31,7 @@ for _,_,files in os.walk(a):
             for k,v in ctrlfh.items():
                 z_new_content=re.sub(k,v, z_new_content)
         
-            z_new_content=re.sub("", z_new_content)
+#             z_new_content=re.sub("", z_new_content)
             fz.write(z_new_content)
 #         with open(z+'/'+'_BME'+i, 'w',encoding='utf8') as fb:
 #             fb.write(z_new_content)
